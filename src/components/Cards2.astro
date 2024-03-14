@@ -1,0 +1,27 @@
+<div>
+    <slot/>
+</div>
+<style>
+    div{
+        width: 22%;
+        height: 150px;
+        margin: 20px 0;
+        background-color: #fafbfe;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        filter: drop-shadow(
+            0 0 20px rgba(0, 0, 0, .1)
+        );
+    }
+    div:hover{
+        background-color: #eef8ff;
+    }
+    @media screen and (max-width: 1050px){
+        div{
+            width: 45%;
+        }
+    }
+</style>

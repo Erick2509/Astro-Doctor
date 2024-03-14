@@ -1,0 +1,250 @@
+---
+import Btn from '../components/Btn.astro';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/public/img/logo.svg" />
+		
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<nav>
+			<div class="conteLogo">
+				<div class="logo">
+					<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.1667 0H3.83333C1.71624 0 0 1.71766 0 3.8365V19.1825C0 21.3014 1.71624 23.019 3.83333 23.019H19.1667C21.2838 23.019 23 21.3014 23 19.1825V3.8365C23 1.71766 21.2838 0 19.1667 0Z" fill="#2AA8FF"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.8626 7.83005C7.90469 7.8023 9.76526 7.02253 11.1804 5.75488C12.5955 7.02253 14.4561 7.8023 16.4982 7.83005C16.5724 8.27214 16.611 8.72632 16.611 9.18951C16.611 12.7392 14.3442 15.759 11.1804 16.8782C8.01656 15.759 5.74985 12.7392 5.74985 9.18951C5.74985 8.72632 5.78845 8.27214 5.8626 7.83005ZM13.6686 10.321C13.9181 10.0713 13.9181 9.66645 13.6686 9.41676C13.4191 9.16707 13.0146 9.16707 12.7651 9.41676L10.5016 11.6822L9.5957 10.7755C9.34622 10.5258 8.94167 10.5258 8.69219 10.7755C8.4427 11.0252 8.4427 11.4301 8.69219 11.6798L10.0498 13.0385C10.2993 13.2882 10.7039 13.2882 10.9533 13.0385L13.6686 10.321Z" fill="white"/>
+						</svg>					
+					<span>Surya Nursing Home</span>
+				</div>
+				<div class="aspa" id="aspa">
+					<svg width="30" height="30" viewBox="0 0 55 51" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<rect width="30" height="30" fill="url(#pattern0)"/>
+						<defs>
+						<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+						<use xlink:href="#image0_2278_14" transform="matrix(0.0625 0 0 0.067402 0 -0.0392157)"/>
+						</pattern>
+						<image id="image0_2278_14" width="16" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAfAAAAHwBFQ/t5AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAACFSURBVDiNpZNbCoAgEEUPLcUdBNL+15D/6QbCdlAfTWCijTEDgjj3nhlfAA4IQAI8enjRBvESgFNGViBeNI9+BYjFwhekNp/A1kvUEFUzA3slOIBFyakt5oHuXtGqplYehTTNk0b7G6YtmA7RdI3mh5RGWuxAItwfwvSZnEyiYi4hUTzuAg7QgPQU54RFAAAAAElFTkSuQmCC"/>
+						</defs>
+						</svg>						
+				</div>
+			</div>
+			
+			<div class="submenu" id="submenu">
+				<div><a href="#">Find Doctors</a></div>
+				<div><a href="#">Hospitals</a></div>
+				<div><a href="#">Medicines</a></div>
+				<div><a href="#">Surgeries</a></div>
+				<div><a href="#">Software for Provider</a></div>
+				<div><a href="#">Facilities</a></div>
+				<div class="btnLogin"><a href="#"><Btn>Login/Signup</Btn></a></div>
+			</div>
+		</nav>
+		<slot />
+		<footer>
+			<div class="contenedor">
+				<div class="logoFooter">
+					<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.1667 0H3.83333C1.71624 0 0 1.71766 0 3.8365V19.1825C0 21.3014 1.71624 23.019 3.83333 23.019H19.1667C21.2838 23.019 23 21.3014 23 19.1825V3.8365C23 1.71766 21.2838 0 19.1667 0Z" fill="#2AA8FF"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.8626 7.83005C7.90469 7.8023 9.76526 7.02253 11.1804 5.75488C12.5955 7.02253 14.4561 7.8023 16.4982 7.83005C16.5724 8.27214 16.611 8.72632 16.611 9.18951C16.611 12.7392 14.3442 15.759 11.1804 16.8782C8.01656 15.759 5.74985 12.7392 5.74985 9.18951C5.74985 8.72632 5.78845 8.27214 5.8626 7.83005ZM13.6686 10.321C13.9181 10.0713 13.9181 9.66645 13.6686 9.41676C13.4191 9.16707 13.0146 9.16707 12.7651 9.41676L10.5016 11.6822L9.5957 10.7755C9.34622 10.5258 8.94167 10.5258 8.69219 10.7755C8.4427 11.0252 8.4427 11.4301 8.69219 11.6798L10.0498 13.0385C10.2993 13.2882 10.7039 13.2882 10.9533 13.0385L13.6686 10.321Z" fill="white"/>
+						</svg>					
+					<span>Surya Nursing Home</span>
+				</div>
+				<div class="submenuFooter">
+					<div class="direccion">
+						<p>Sahibabad, Ghaziabad, Uttar Pradesh 201005</p>
+						<p>+91-88787878787</p>
+						<p>info@Suryanursinghome.com</p>
+					</div>
+					<div class="submenuF">
+						<ul>
+							<li>About Us</li>
+							<li>Our Pricing</li>
+							<li>Our Gallery</li>
+							<li>Appointment</li>
+							<li>Privacy Policy</li>
+						</ul>
+					</div>
+					<div class="submenuF">
+						<ul>
+							<li>Orthology</li>
+							<li>Neurology</li>
+							<li>Dental Care</li>
+							<li>Opthalmology</li>
+							<li>Cardiology</li>
+						</ul>
+					</div>
+					<div class="submenuF">
+						<ul>
+							<li>About Us</li>
+							<li>Our Pricing</li>
+							<li>Our Gallery</li>
+							<li>Appointment</li>
+							<li>Privacy Policy</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+<script>
+	const barraMenu = document.getElementById('aspa');
+	const menu = document.getElementById('submenu');
+	barraMenu?.addEventListener('click', () => {
+		menu?.classList.toggle('submenu--show');
+
+	} );
+</script>
+<style>
+	body{
+		font-family: 'Poppins', sans-serif;
+		background-color: #e7f0ff;
+		margin: 0;
+	}
+	nav{
+		width: 80%;
+		height: 96px;
+		align-items: center;
+		margin: auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	.conteLogo{
+		width: 20%;
+		display: flex;
+		color: #2AA8FF;
+	}
+	.logo{
+		display: flex;
+		align-items: center;
+
+	}
+	.conteLogo span{
+		padding: 0 5px;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+	.submenu{
+		width: 80%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.submenu div a{
+		text-decoration: none;
+		color: #000000;
+	}
+
+	/*FOOTER*/
+	footer{
+		width: 100%;
+		padding: 30px 0;
+		background-color: #1b3c74;
+	}
+	.contenedor{
+		width: 80%;
+		margin: auto;
+	}
+	.submenuFooter{
+		display: flex;
+		justify-content: space-between;
+	}
+	.submenuFooter .submenuF ul li{
+		color: #ffffff;
+		margin: 20px 0;
+		list-style: square;
+	}
+	.submenuFooter .direccion p{
+		color: #ffffff;
+
+	}
+	.logoFooter{
+		width: 20%;
+		display: flex;
+		color: #2AA8FF;
+		align-items: center;
+	}
+	.logoFooter span{
+		padding: 0 5px;
+		font-size: 18px;
+		font-weight: bolder;
+	}
+	.aspa{
+		display: none;
+	}
+	@media screen and (max-width: 1050px){
+		nav{
+			width: 100%;
+			height: auto;
+			position: fixed;
+			z-index: 3;
+			flex-direction: column;
+			background-color: #fafbfe;
+		}
+		.aspa{
+			display: block;
+			cursor: pointer;
+		}
+		.conteLogo{
+			width: 95%;
+			padding: 2.5%;
+			justify-content: space-between;
+		}
+		.submenu{
+			display: none;
+			width: 100%;
+			z-index: 3;
+			flex-direction: column;
+			text-align: center;
+			background-color: #fafbfe;
+		}
+		.submenu div{
+			padding: 30px 0;
+			font-size: 25px;
+		}
+		.submenu div:hover{
+			background-color: #eef8ff;
+		}
+
+		.submenu--show{
+			animation: apa 2s ;
+			z-index: 0;
+			display: block;
+		}
+
+		@keyframes apa {
+        from {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        to {
+            opacity: 1;
+        }
+    }
+		
+
+		/*FOOTER*/
+		.logoFooter{
+			width: 100%;
+			justify-content: center;
+		}
+		.submenuFooter{
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+		}
+
+	}
+
+</style>

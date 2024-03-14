@@ -1,0 +1,72 @@
+---
+import SliderCard from '../SliderCard.astro';
+---
+<section>
+    <p class="titulo">Our Medical Specialist</p>
+    <div class="slider">
+            <SliderCard>
+                <img src="/public/img/Dr. Ahmad Khan.webp" alt="Dr. Ahmad Khan" slot="img">
+                <p slot="nombre">Dr. Ahmad Khan</p>
+                <span slot="especialidad">Neurologist</span>
+            </SliderCard>
+            <SliderCard>
+                <img src="/public/img/Dr. Heena Sachdeva.webp" alt="Dr. Heena Sachdeva" slot="img">
+                <p slot="nombre">Dr. Heena Sachdeva</p>
+                <span slot="especialidad">Orthopadics</span>
+            </SliderCard>
+            <SliderCard>
+                <img src="/public/img/Dr. Ahmad Stevens.webp" alt="Dr. Heena Sachdeva" slot="img">
+                <p slot="nombre">Dr. Heena Sachdeva</p>
+                <span slot="especialidad">Medicine</span>
+            </SliderCard>
+            <SliderCard>
+                <img src="/public/img/Dr. Lesley Hull.webp" alt="Dr. Lesley Hull" slot="img">
+                <p slot="nombre">Dr. Lesley Hull</p>
+                <span slot="especialidad">Orthopadics</span>
+            </SliderCard>
+    </div>
+</section>
+<style>
+    section{
+        width: 100%;
+        padding: 30px 0;
+        background-color: #ffffff;
+    }
+    section .titulo{
+        text-align: center;
+        font-size: 48px;
+    }
+    .slider{
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    .slider img{
+        width: 100%;
+        view-timeline-name: --revealing-image;
+        animation-name: show;
+        animation-fill-mode: both;
+        animation-timeline: --revealing-image;
+        animation-range: entry 25% cover 50%;
+    }
+    .slider span{
+        color: #2AA7FF;
+    }
+    @keyframes show{
+        from{
+            opacity: 0;
+            scale: 25%;
+        }
+        to{
+            opacity: 1;
+            scale: 100%;
+        }
+    }
+    @media screen and (max-width: 1050px){
+        .slider{
+            flex-wrap: wrap;
+        }
+    }
+    
+
+</style>
