@@ -1,21 +1,28 @@
 <section>
-    <div class="img">
-        <img src="/img/image 1.webp" alt="">
+    <div class="conteOferta">
+        <div class="img">
+            <img src="/img/image 1.webp" alt="">
+        </div>
+        <div class="img">
+            <img src="/img/image 1 (1).webp" alt="">
+        </div>
+        <div class="img">
+            <img src="/img/image 1 (2).webp" alt="">
+        </div>
     </div>
-    <div class="img">
-        <img src="/img/image 1 (1).webp" alt="">
-    </div>
-    <div class="img">
-        <img src="/img/image 1 (2).webp" alt="">
-    </div>
+    
 </section>
 <style>
     section{
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
         background-color: #ffffff;
         padding: 100px 0;
+    }
+    .conteOferta{
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
     }
     section .img{
         view-timeline-name: --revealing-image;
@@ -24,6 +31,7 @@
         animation-timeline: --revealing-image;
         animation-range: entry 25% cover 50%;
     }
+
     @keyframes show{
         from{
             opacity: 0;
@@ -34,12 +42,14 @@
             scale: 100%;
         }
     }
+
     @media screen and (max-width: 1050px){
-        section{
+        .conteOferta{
             flex-direction: column;
-            justify-content: center;
         }
-        .img{
+
+        .img img{
+            width: 100%;
             text-align: center;
         }
     }
